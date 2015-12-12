@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Title -->
+    <title>Breezy.css</title>
+    <!-- StyleSheets -->
+    <link rel="stylesheet" type="text/css" href="breezy.1.0.min.css">
+</head>
+
+<body>
+    <div class="b-row col--6">
+        <div></div>
+        <div class="col-g--4">
+            <div class="b-header--50">
+                <div>
+                    <h1 class="b-heading--1">Breezy.css</h1>
+                </div>
+            </div>
+            <div style="text-align:center;" class="b-heading--4">
+                <a href="breezy.1.0.min.css" class="b-btn">Download</a>
+                <a href="https://github.com/Jacob-Gray/breezy.css" class="b-btn--min">View on Github</a>
+            </div>
+            <h2 class="b-heading--2">What is breezy.css?</h2>
+            <p class="b-paragraph">Breezy is a lightweight CSS Library for modern browsers. Sizing only ~10kb, it includes a grid layout, form elements, buttons, links, headings, headers, and more. Breezy is made to be more of a helper framework, and can be easily changed to fit your needs.</p>
+            <p class="b-quote" data-title=" - Random Joe">And, breezy has some nice pre-styled elements, so you can be lazy &hearts;</p>
+            <p class="b-paragraph">Yeah, that would be a blockquote. With breezy, you can add it with one line of HTML</p>
+            <h3 class="b-heading--3">On to the demos!</h3>
+            <p class="b-paragraph">Okay, enough boring, lets have some fun. To start with, the grid layout:</p>
+            <div class="b-row col--4 row-showgrid">
+                <div>Here we have a simple 4 column row</div>
+                <div>You can add the border to any grid</div>
+                <div> by adding the <span class="b-highlight--y">.row-showgrid</span> class</div>
+                <div>Sort of helpful for debugging</div>
+            </div>
+            <p class="b-paragraph">It might not be all that exciting, but very useful. The grid layout can go up to 12 seperate columns or rows, like so:</p>
+            <div class="b-row col--12 row-showgrid">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+            <p class="b-paragraph">But they are all the same size, you say. What if I want one to be bigger then the others? No problem.</p>
+            <div class="b-row col--8 row-showgrid">
+                <div>1</div>
+                <div>2</div>
+                <div class="col-g--4">3 4 5 6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+            <p class="b-paragraph">See what happened there? That is a 8 column row(The parents class attribute is <span class="b-highlight--y">b-row col--8 row-showgrid</span>). The columns 1,2,7, and 8 are all the normal size, in this case 1/8 of the row's width. The middle column uses the class <span class="b-highlight--y">.col-g--4</span>, which tells it to take up the space of 4 different columns( which is why, in the demo, it has the 3 4 5 6 numbers.)</p>
+            <p class="b-paragraph">Columns work the exact same way as rows, except they are vertical:</p>
+            <div class="b-col row--4 col-showgrid">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <p class="b-paragraph">Why are they so small, and only the height of the text? Because, their parent has no height set, so it's auto height is it's contents. Add a height for it to look like this:</p>
+            <div class="b-col row--4 col-showgrid" style="height:300px;">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <p class="b-paragraph">Making one taller then the others is the exact same as the row, except you use the <span class="b-highlight--y">.row-g--{{number of rows you want the row to take up}}</span> class instead.</p>
+            <h3 class="b-heading--4">Next up, buttons</h3>
+            <p class="b-paragraph">Everyone loves buttons. Especially pressing buttons. And we ship with some sweet blue buttons, in 3 different styles(well, 4, sort of):</p>
+            <div class="b-row col--4">
+                <div>
+                    <button class="b-btn">Classic</button>
+                </div>
+                <div>
+                    <button class="b-btn--min">Minimalistic</button>
+                </div>
+                <div>
+                    <button class="b-btn--round">Round</button>
+                </div>
+                <div>
+                    <button class="b-btn b-border">Classic (with <span class="b-highlight--y">.b-border</span>)!</button>
+                </div>
+            </div>
+            <p class="b-paragraph">As you can see, there are 3 button types(<span class="b-highlight--y">.b-btn</span>, <span class="b-highlight--y">.b-btn--min</span>, <span class="b-highlight--y">.b-btn--round</span>), then a style option <span class="b-highlight--y">.b-border</span>:</p>
+            <div class="b-row col--3">
+                <div>
+                    <button class="b-btn b-border">Classic (with <span class="b-highlight--y">.b-border</span>)</button>
+                </div>
+                <div>
+                    <button class="b-btn--min b-border">Minimalistic (with <span class="b-highlight--y">.b-border</span>)</button>
+                </div>
+                <div>
+                    <button class="b-btn--round b-border">Round (with <span class="b-highlight--y">.b-border</span>)</button>
+                </div>
+            </div>
+            <p class="b-paragraph">We also have disabled styles, just set the elements disabled to true(or just add the attribute with no value):</p>
+            <div class="b-row col--4">
+                <div>
+                    <button class="b-btn" disabled>Classic</button>
+                </div>
+                <div>
+                    <button class="b-btn--min" disabled>Minimalistic</button>
+                </div>
+                <div>
+                    <button class="b-btn--round" disabled>Round</button>
+                </div>
+                <div>
+                    <button class="b-btn b-border" disabled>Classic (with <span class="b-highlight--y">.b-border</span>)</button>
+                </div>
+            </div>
+            <p class="b-paragraph">That's a wrap for buttons, go ahead and click them to your hearts content.</p>
+            <h3 class="b-heading--4">Text Containers</h3>
+            <p class="b-paragraph">These have already been used throughout this page, so nothing new here.</p>
+            <p class="b-paragraph">This, of course, is a paragraph, and uses the .b-paragraph class</p>
+            <h1 class="b-heading--1">Large heading, using <span class="b-highlight--y">.b-heading--1</span></h1>
+            <h2 class="b-heading--2">Medium heading, using <span class="b-highlight--y">.b-heading--2</span></h2>
+            <h3 class="b-heading--3">Small heading, using <span class="b-highlight--y">.b-heading--3</span></h3>
+            <h4 class="b-heading--4">Tiny heading, using <span class="b-highlight--y">.b-heading--4</span></h4>
+            <p class="b-quote" data-title=" - Humpty Dumpty">And, of course, the long awaited blockquote using <span class="b-highlight--y">.b-quote</span></p>
+            <p class="b-paragraph">Just a note with blockquotes, the quote author is specified by adding a data-title attribute. In the above element, it looks like: <span class="b-highlight--y">data-title=" - Humpty Dumpty" </span> Highlights are added with <span class="b-highlight--y">.b-highlight</span>. In this case, <span class="b-highlight--y">.b-highlight--y</span> (there is also <span class="b-highlight--b">.b-highlight--b</span>)
+            </p>
+            <p class="b-paragraph">And then, of course, the simple link: <a href="#" class="b-link">Make we with the <span class="b-highlight--y">.b-link</span> class!</a> Links can also be disabled with the disabled attribute: <a href="#" class="b-link" disabled>Make we with the <span class="b-highlight--y">.b-link</span> class!</a>
+            </p>
+            <h3 class="b-heading--4">Forms</h3>
+            <p class="b-paragraph">The forms elements we support are quite basic currently. Just the simple textbox inputs and textareas. But, then again, most of the other input elements require either javascript, or extra elements to style them:</p>
+            <input type="text" class="b-input" placeholder=".b-input">
+            <input type="text" class="b-input" placeholder=".b-input [disabled]" disabled>
+            <p class="b-paragraph">Simple and easy.</p>
+            <textarea placeholder=".b-textarea" class="b-textarea"></textarea>
+            <textarea placeholder=".b-textarea [disabled]" class="b-textarea" disabled></textarea>
+            <h3 class="b-heading--4">Headers</h3>
+            <p class="b-paragraph">Headers are the usually placed at the top of pages, hence the name. There are 5 different header classes. The first 4, <span class="b-highlight--y">.b-header--25</span>, <span class="b-highlight--y">.b-header--50</span>, <span class="b-highlight--y">.b-header--75</span>, <span class="b-highlight--y">.b-header--100</span> are calculated by the browsers height. <span class="b-highlight--y">.b-header--25</span>, for example, will be 25 percent of the browsers height: </p>
+            <div class="b-header--25"></div>
+            <p class="b-paragraph">Headers usually have text inside of them, just place your content inside a single div like:</p>
+            <div class="b-header--50">
+                <div>Text Here :)</div>
+            </div>
+            <p class="b-paragraph">If you want bigger text, you can easily change the font size with your own CSS, or be lazy and put a heading in it:</p>
+            <div class="b-header--50">
+                <div>
+                    <div class="b-heading--1">Text Here :D</div>
+                </div>
+            </div>
+            <p class="b-paragraph">The final header type is <span class="b-highlight--y">.b-header--fill</span>. It has no set height and will fill it's containers full width and height. Columns come in handy here:</p>
+            <div class="b-col row--2" style="height:300px;">
+                <div>
+                    <div class="b-header--fill">
+                        <div>Want to use me as a blog post title?</div>
+                    </div>
+                </div>
+                <div>Senserit ipsum ut laboris fidelissimae si eram ut litteris quo anim. Eu quorum sunt dolor ingeniis, o legam praetermissum. Varias ea aliquip, offendit est voluptate ex eu cillum summis quem commodo, minim ubi excepteur nam probant eu cernantur, excepteur aliqua possumus incurreret ea officia ipsum cupidatat ex ingeniis varias dolor de tamen. Ea nostrud te commodo, quo legam illustriora. Singulis veniam legam ut quem. An dolore relinqueret nam iis et fore deserunt, cupidatat concursionibus o nostrud te officia ad litteris.</div>
+            </div>
+            <p class="b-paragraph">That's it for now! Just download, and you are all set.</p>
+
+            <div style="text-align:center;" class="b-heading--4">
+                <a href="breezy.1.0.min.css" class="b-btn">Download</a>
+                <a href="https://github.com/Jacob-Gray/breezy.css" class="b-btn--min">View on Github</a>
+            </div>
+            <p>This page is built completley with breezy.css(Well, there are 3 inline styles). Copyright Jacob Gray</p>
+        </div>
+        <div></div>
+    </div>
+
+
+
+</body>
+
+</html>
